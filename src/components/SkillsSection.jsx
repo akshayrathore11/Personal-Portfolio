@@ -1,25 +1,88 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
+// FontAwesome Icons
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaGithub,
+  FaLinux,
+} from "react-icons/fa";
+
+// Simple Icons
+import {
+  SiJavascript,
+  SiTypescript,
+  SiTailwindcss,
+  SiRedux,
+  SiReactrouter,
+  SiExpress,
+  SiMongodb,
+  SiPostgresql,
+  SiCloudinary,
+  SiSupabase,
+  SiVercel,
+  SiRender,
+  SiMaildotru,
+  SiChartdotjs,
+  SiVite,
+} from "react-icons/si";
+
+// VS Code Icon
+import { VscVscode } from "react-icons/vsc";
+
 const skills = [
   // Frontend
-  { name: "HTML", level: 95, category: "frontend" },
-  { name: "CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
+  { name: "HTML", icon: <FaHtml5 size={40} />, category: "frontend" },
+  { name: "CSS", icon: <FaCss3Alt size={40} />, category: "frontend" },
+  {
+    name: "JavaScript",
+    icon: <SiJavascript size={40} />,
+    category: "frontend",
+  },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript size={40} />,
+    category: "frontend",
+  },
+  { name: "React", icon: <FaReact size={40} />, category: "frontend" },
+  {
+    name: "React Router",
+    icon: <SiReactrouter size={40} />,
+    category: "frontend",
+  },
+  { name: "Redux Toolkit", icon: <SiRedux size={40} />, category: "frontend" },
+  { name: "Context API", icon: <FaReact size={40} />, category: "frontend" },
+  {
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss size={40} />,
+    category: "frontend",
+  },
+  { name: "DaisyUI", icon: <SiTailwindcss size={40} />, category: "frontend" },
+  { name: "Shadcn", icon: <SiVite size={40} />, category: "frontend" },
+  { name: "Recharts", icon: <SiChartdotjs size={40} />, category: "frontend" },
 
   // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
+  { name: "Node.js", icon: <FaNodeJs size={40} />, category: "backend" },
+  { name: "Express", icon: <SiExpress size={40} />, category: "backend" },
+  { name: "MongoDB", icon: <SiMongodb size={40} />, category: "backend" },
+  { name: "Mongoose", icon: <SiMongodb size={40} />, category: "backend" },
+  { name: "PostgreSQL", icon: <SiPostgresql size={40} />, category: "backend" },
+  { name: "Supabase", icon: <SiSupabase size={40} />, category: "backend" },
 
   // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
-  { name: "Cursor", level: 95, category: "tools" },
+  { name: "Git", icon: <FaGitAlt size={40} />, category: "tools" },
+  { name: "GitHub", icon: <FaGithub size={40} />, category: "tools" },
+  { name: "VS Code", icon: <VscVscode size={40} />, category: "tools" },
+  { name: "Cursor", icon: <SiVite size={40} />, category: "tools" },
+  { name: "Linux", icon: <FaLinux size={40} />, category: "tools" },
+  { name: "Cloudinary", icon: <SiCloudinary size={40} />, category: "tools" },
+  { name: "Vercel", icon: <SiVercel size={40} />, category: "tools" },
+  { name: "Render", icon: <SiRender size={40} />, category: "tools" },
+  { name: "EmailJS", icon: <SiMaildotru size={40} />, category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
@@ -30,6 +93,7 @@ export const SkillsSection = () => {
   const filteredSkills = skills.filter(
     (skill) => activeCategory === "all" || skill.category === activeCategory
   );
+
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
@@ -54,16 +118,15 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 justify-items-center">
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover flex items-center justify-center"
-              style={{ minHeight: "120px" }} // You can adjust the minHeight as needed
+              className="flex flex-col items-center text-center gap-2 transition-all duration-300 hover:scale-110 hover:opacity-90"
+              title={skill.name}
             >
-              <span className="font-semibold text-lg text-center w-full">
-                {skill.name}
-              </span>
+              <div className="text-primary">{skill.icon}</div>
+              <span className="text-sm font-medium">{skill.name}</span>
             </div>
           ))}
         </div>

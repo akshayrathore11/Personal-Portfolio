@@ -109,7 +109,7 @@ export const ContactSection = () => {
               <h4 className="font-medium mb-4">Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
                 <a
-                  href="https://www.linkedin.com/in/akshayrathore9010"
+                  href="https://www.linkedin.com/in/akshayrathore11"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -124,9 +124,9 @@ export const ContactSection = () => {
                   <Instagram />
                 </a>
 
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                {/* <a href="#" target="_blank" rel="noopener noreferrer">
                   <Twitter />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@ export const ContactSection = () => {
                 name="from_name"
                 required
                 className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                placeholder="Akshay Rathore..."
+                placeholder=".................."
               />
             </div>
 
@@ -164,7 +164,7 @@ export const ContactSection = () => {
                 name="email"
                 required
                 className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                placeholder="akshayrathore1197@gmail.com"
+                placeholder="your@gmail.com"
               />
             </div>
 

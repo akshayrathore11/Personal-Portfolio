@@ -3,40 +3,50 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Codefusion",
+    title: "URL-Shortner",
     description:
-      "A sleek frontend IDE for HTML, CSS, and JavaScript, powered by React and Node.js..",
-    image: "/projects/cs.png",
-    tags: ["React", "TailwindCSS", "NodeJS"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "A sleek full-stack URL shortener built with Supabase and React—custom links, real-time stats, and responsive UI.",
+    image: "/projects/url-shortner2.png",
+    tags: ["TailwindCSS","React Js", "Rechart","NodeJS","Supabase"],
+    demoUrl: "https://url-shortener-ltu2hid3k-akshays-projects-1a176902.vercel.app/",
+    githubUrl: "https://github.com/akshayrathore11/URL-ShorteNer",
   },
   {
     id: 2,
-    title: "A Chat App",
+    title: "Code-Chat",
     description:
-      "Real-time messaging platform featuring group chats, media sharing, and advanced notification controls",
-    image: "/projects/cs.png",
-    tags: ["React", "Soket.IO", "NodeJS"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "A real-time code collaboration and chat platform built with React, Node.js, and Socket.io—share code, chat live, and build together.",
+    image: "/projects/codechat.png",
+    tags: ["DaisyUI","React Js", "Soket.IO", "NodeJS","MongoDB"],
+    demoUrl: "https://code-chat-gvxs.onrender.com/",
+    githubUrl: "https://github.com/akshayrathore11/Code-Chat",
   },
   {
     id: 3,
-    title: "Expense Tracker",
+    title: "Codefusion",
     description:
-      "Real-time messaging platform featuring group chats, media sharing, and advanced notification controls",
-    image: "/projects/cs.png",
-    tags: ["React", "Node.js"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "A browser-based code editor with live preview and built-in HTML, CSS, and JavaScript tutorials for fast learning and prototyping.",
+    image: "/projects/codefusion2.png",
+    tags: ["Typescript","Tailwind CSS","React Js", "Node.js","Monaco-Editor"],
+    demoUrl: "https://codefusion-editor-sq3c.onrender.com/login",
+    githubUrl: "https://github.com/akshayrathore11/Codefusion-editor",
+  },
+  {
+    id: 4,
+    title: "Real-Time Currency Converter",
+    description:
+      "A responsive JavaScript currency converter that fetches real-time exchange rates and allows seamless conversion across global currencies.",
+    image: "/projects/cc.png",
+    tags: ["HTML5","CSS3","Tailwind CSS","Javascript","API-Fawazah"],
+    demoUrl: "https://js-projects-lemon-nine.vercel.app/",
+    githubUrl: "https://github.com/akshayrathore11/Js-Projects/tree/master/currency-convertor",
   },
 ];
 
 export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           {" "}
           Featured <span className="text-primary"> Projects </span>
@@ -101,7 +111,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/akshayrathore9010"
+            href="https://github.com/akshayrathore11"
           >
             Check My Github <ArrowRight size={16} />
           </a>

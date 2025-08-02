@@ -21,10 +21,9 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-           
-            I craft exceptional web experiences with cutting-edge technologies,
-            engineering efficient, structured code for stunning and
-            high-performing interfaces.
+            <span className=" font-bold">Full Stack Developer</span> | React •
+            Node.js • MongoDB • PostgreSQL Building fast, beautiful, and
+            scalable web applications.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
