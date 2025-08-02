@@ -8,7 +8,7 @@ const projects = [
       "A sleek full-stack URL shortener built with Supabase and React—custom links, real-time stats, and responsive UI.",
     image: "/projects/url-shortner2.png",
     tags: ["TailwindCSS","React Js", "Rechart","NodeJS","Supabase"],
-    demoUrl: "https://url-shortener-ltu2hid3k-akshays-projects-1a176902.vercel.app/",
+    demoUrl: "https://url-shortener-two-ashen.vercel.app/",
     githubUrl: "https://github.com/akshayrathore11/URL-ShorteNer",
   },
   {
